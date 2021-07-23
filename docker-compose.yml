@@ -1,0 +1,12 @@
+version: "3"
+services: 
+  sql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sql2019
+    ports: 
+      - "1401:1433"
+    environment: 
+      ACCEPT_EULA: Y
+      SA_PASSWORD: test@123
+      MSSQL_PID: Express
+      
