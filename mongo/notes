@@ -1,0 +1,16 @@
+steps:
+  1. run docker-compose up -d command to run mongo service
+  2. To goto mongodb shell inside the container use docker exec -it 49fde0c46f20 bash
+  3. connect created mongo service instance using localhost:27018 . where 27018 is the external port that can be configured inside docker-compose
+
+
+useful command to connect mongoshell
+  => mongosh to connect mongo shell
+  => show dbs; to list all the databases inside that shell
+  => use [database_name] 
+  =>  db.getCollection('user').find({}) to get particular collection data
+
+
+useful docker command
+  => docker ps --all
+    to list all the container 
